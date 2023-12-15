@@ -8,18 +8,14 @@ const StyledSection = styled.section`
       align-items: center;
       flex-direction: column;
       gap: 2rem;
-      & h1{
-        font-size:10rem;
-      }
     }
 `;
 
-export function Section( {title, msj}){
-    return(
-        <StyledSection>
+export function Section({ children, onMouseMove }) {
+    return (
+        <StyledSection onMouseMove={onMouseMove}>
             <section>
-                <h1>{title}</h1>
-                <p>{`${msj} ${title}`}</p>
+                {children}
             </section>
         </StyledSection>
     );
