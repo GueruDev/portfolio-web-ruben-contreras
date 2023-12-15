@@ -1,0 +1,29 @@
+# Archivos generados por Vite
+.vite
+/node_modules
+/dist
+
+# Archivos de caché
+.DS_Store
+**/.DS_Store
+
+# Archivos de configuración
+.env
+.env.local
+.env.development
+.env.production
+
+# Archivos de depuración
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Archivos de logs
+/logs
+
+# Archivos temporales
+/temp
+
+# Archivos de código fuente para herramientas
+.vscode
+.idea
