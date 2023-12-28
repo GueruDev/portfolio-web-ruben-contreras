@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Routes , Route }  from 'react-router-dom';
 import { About } from './pages/about';
 import { Contact } from './pages/contact';
 import { Inicio } from './pages/inicio';
-import { Navbar } from './components/navbar';
-import { Section } from './components/section';
+import { DesktopNavbar } from './components/navbar';
+import { ImageGrid } from './pages/projects';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -20,9 +20,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-size: 1.6rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-    background-color: black;
-    color: white;
   }
 `;
 
@@ -31,16 +28,15 @@ function App() {
     <>
       <GlobalStyle />
       <Router>
-        <Navbar />
+        <DesktopNavbar />
         <Routes>
-          <Route path='/inicio' element={<Inicio />} />
+          <Route path='/' element={<Inicio />} />
+          <Route path='/projects' element={<ImageGrid />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/' element={
-            <Section title={'Hello World!! 🚀'} msj={'This is the base page soo...'}/>
-          } />
         </Routes>
       </Router>
+      {/* <Inicio /> */}
     </>
   )
 }
