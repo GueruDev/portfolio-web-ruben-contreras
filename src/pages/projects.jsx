@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { Section } from "../components/section";
 
 import styled from "styled-components";
@@ -17,6 +18,7 @@ const StyledImageGrid = styled.div`
         overflow: hidden;
         transition: all 0.5s ease;
         flex: 1;
+        cursor: pointer;
 
         img {
             width: 100%;
@@ -74,25 +76,27 @@ const Star = styled.div`
     );
 `;
 
-export function ImageGrid() {
-
+  export function ImageGrid() {
+    const navigate = useNavigate();
+  
     return (
-        <Section color='black'>
-            <StyledImageGrid>
-                    <div className="image-card" key={1}>
-                        <img src={reactImg} />
-                        <Star />
-                    </div>
-                    <div className="image-card" key={2}>
-                        <img src={angularImg} />
-                    </div>
-                    <div className="image-card" key={3}>
-                        <img src={svelteImg} />
-                    </div>
-                    <div className="image-card" key={4}>
-                        <img src={vueImg} />
-                    </div>
-            </StyledImageGrid>
-        </Section>
+      <Section>
+        <StyledImageGrid>
+          <a onClick={() => navigate('/projects/react')} className="image-card" key={1}>
+            <img src={reactImg} />
+            <Star />
+          </a>
+          <a onClick={() => navigate('/projects/angular')} className="image-card" key={2}>
+            <img src={angularImg} />
+          </a>
+          <a onClick={() => navigate('/projects/svelte')} className="image-card" key={3}>
+            <img src={svelteImg} />
+          </a>
+          <a onClick={() => navigate('/projects/vue')} className="image-card" key={4}>
+            <img src={vueImg} />
+          </a>
+        </StyledImageGrid>
+      </Section>
     );
-}
+  }
+  

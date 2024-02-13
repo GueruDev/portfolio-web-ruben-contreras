@@ -1,57 +1,72 @@
 import React, { useEffect, useRef } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled  from 'styled-components';
 import { Section } from '../components/section';
 import rubenContreras from '../img/ruben-contreras.png';
 
-const slideIn = keyframes`
-  0% { transform: translateY(-20px); }
-  100% { transform: translateY(0); }
-`;
-
-const blinkCursor = keyframes`
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
-`;
-
 const HeroSection = styled.div`
-  display: flex;
-  flex-direction: column;
+width: 100%;
+
+`;
+
+const HeroContainer = styled.div`
+  width: clamp(500px,90%,1300px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
-  animation: ${slideIn} 2s ease;
-`;
+  div{
+    position: absolute;
+    display: grid;
+    h1, p, span{
+      font-size: clamp(5rem, 4vw, 10rem);
 
-const HeroImage = styled.img`
-  width: 30%;
-  aspect-ratio:  1 / 1;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-  &:hover {
-    transform: scale(1.1);
+      font-weight: bold;
+    }
+    h1{
+      color: var(--secondary-font-color);
+    }
+    span:nth-of-type(1){
+      text-align: center;
+      color: var(--thirdary-font-color);
+    }
+    span:nth-of-type(2){
+      text-align: end;
+      color: var(--secondary-bg-color);
+    }
+    button{
+      place-self: start;
+      margin: 2rem 0;
+      padding: .7rem 4rem;
+      cursor: pointer;
+      
+      /* font-size: 5rem; */
+      font-size: clamp(3rem, 2vw, 8rem);
+      font-weight: bold;
+      
+      background-color: var(--secondary-btn-color);
+      color:#000;
+      border-radius: 50px;
+    }
+  }
+  img{
+    grid-column: 3 / 6;
+    height: 100vh;
+
+  }
+
+  @media(width <= 1450px){
+    grid-template-columns: 1fr auto;
+    div{
+      grid-column: 1 / 3;
+    }
+    img{
+      grid-column: 2 / 3;
+    }
+  }
+  @media(width <= 1190px){
   }
 `;
 
-const HeroTitle = styled.h1`
-  font-size: 12rem;
-  margin-bottom: 10px;
-`;
-
-const HeroSubtitle = styled.p`
-  font-size: 6rem;
-  margin-bottom: 20px;
-  &:after {
-    content: '|';
-    animation: ${blinkCursor} 1s infinite;
-  }
-`;
-
-const HeroSlogan = styled.p`
-  font-size: 5rem;
-  font-weight: bold;
-  text-align: center;
-`;
 
 export const Inicio = () => {
   const renderCount = useRef(0);
@@ -99,10 +114,17 @@ export const Inicio = () => {
   return (
     <Section>
       <HeroSection>
-        <HeroImage src={rubenContreras} alt="Rubén Contreras Guerrero" />
-        <HeroTitle>Ruben Contreras Guerrero</HeroTitle>
-        <HeroSubtitle ref={subtitleRef}></HeroSubtitle>
-        <HeroSlogan>"Do it ... ORIGINAL...!! Do it DIFFERENT!"</HeroSlogan>
+        <HeroContainer>
+          <div>
+            <h1>Ruben Contreras</h1>
+            <span>a</span>
+            <p ref={subtitleRef}></p>
+            <span>that you need</span>
+            <button type="button">See my projects</button>
+          </div>
+          <img src={rubenContreras} alt="Rubén Contreras Guerrero" />
+
+        </HeroContainer>
       </HeroSection>
     </Section>
   );

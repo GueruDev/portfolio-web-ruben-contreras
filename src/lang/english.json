@@ -1,0 +1,24 @@
+{
+    "english":{
+        "navbar":{
+            "inicio": "Inicio",
+            "projects": "Proyects",
+            "about me": "About me",
+            "contact": "Contact"
+        },
+        "inicio":{
+            "h1": "Ruben Contreras Guerrero",
+            "phrases": ["Frontend", "React Developer","FullStack", "Designer", "Self-taught"],
+            "slogan": "Do it ORIGINAL ... do it DIFFERENT!"
+        },
+        "projects":{
+            "react":[],
+            "angular":[],
+            "svelte":[],
+            "vue":[]
+        },
+        "about":{
+            
+        }
+    }
+}
