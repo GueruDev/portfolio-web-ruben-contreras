@@ -18,12 +18,15 @@ const HeroContainer = styled.div`
     position: absolute;
     display: grid;
     h1, p, span{
-      font-size: clamp(5rem, 4vw, 10rem);
-
+      font-size: clamp(4rem, 4vw, 10rem);
+      
       font-weight: bold;
     }
     h1{
       color: var(--secondary-font-color);
+    }
+    p{
+      height:clamp(5rem, 4vw, 10rem);
     }
     span:nth-of-type(1){
       text-align: center;
@@ -51,26 +54,30 @@ const HeroContainer = styled.div`
   img{
     grid-column: 3 / 6;
     height: 100vh;
-
   }
-
-  @media(width <= 1450px){
-    grid-template-columns: 1fr auto;
+  @media(width <= 1170px){
+    img{
+      grid-column: 2 / 6;
+    }
+  }
+  @media(width <= 768px){
+    grid-template-columns:unset;
+    grid-template-rows: 1fr 1fr;
     div{
-      grid-column: 1 / 3;
+      grid-column: unset;
+      grid-row: 1 / 2;
+      position: relative;
     }
     img{
-      grid-column: 2 / 3;
+      height: 50vh;
+      grid-column: unset;
+      grid-row: 2 / 3;
     }
-  }
-  @media(width <= 1190px){
   }
 `;
 
 
 export const Inicio = () => {
-  const renderCount = useRef(0);
-
   const phrases = ['Frontend', 'React Developer','FullStack', 'Designer', 'Self-taught'];
   const subtitleRef = useRef('');
   
@@ -104,13 +111,6 @@ export const Inicio = () => {
     addLetters();
   }, []);
 
-
-  useEffect(() => {
-    renderCount.current = renderCount.current + 1;
-    console.log(`Renderizado ${renderCount.current} veces`);
-  });
-
-
   return (
     <Section>
       <HeroSection>
@@ -120,7 +120,7 @@ export const Inicio = () => {
             <span>a</span>
             <p ref={subtitleRef}></p>
             <span>that you need</span>
-            <button type="button">See my projects</button>
+            <button type="button">See my servicies</button>
           </div>
           <img src={rubenContreras} alt="Rubén Contreras Guerrero" />
 

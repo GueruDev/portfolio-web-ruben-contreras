@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { About } from "./pages/about";
 import { Contact } from "./pages/contact";
 import { Inicio } from "./pages/inicio";
-import { DesktopNavbar } from "./components/navbar";
+import { Navbar } from "./components/navbar/navbar";
 import { ImageGrid } from "./pages/projects";
 import { Layout } from "./pages/projectsLayout/layout";
 
@@ -63,7 +63,7 @@ function App() {
     <>
       <GlobalStyle />
       <Router>
-        <DesktopNavbar />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/projects" element={<ImageGrid />} />
