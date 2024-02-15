@@ -55,12 +55,12 @@ const HeroContainer = styled.div`
     grid-column: 3 / 6;
     height: 100vh;
   }
-  @media(width <= 1170px){
+  @media(width < 1170px){
     img{
       grid-column: 2 / 6;
     }
   }
-  @media(width <= 768px){
+  @media(width < 768px){
     grid-template-columns:unset;
     grid-template-rows: 1fr 1fr;
     div{

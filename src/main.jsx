@@ -53,6 +53,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
   body {
+    background-color: #000;
     font-size: 1.6rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }

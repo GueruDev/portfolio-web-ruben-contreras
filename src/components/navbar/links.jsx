@@ -9,7 +9,7 @@ import {
 
 const StyledLinks = styled.ul`
   display: flex;
-  gap: 5rem;
+  gap: clamp(2.1rem, 2vw, 5rem);
   list-style: none;
   & li {
     position: relative;
@@ -54,8 +54,28 @@ const StyledLinks = styled.ul`
       }
     }
   }
-  @media (width <= 768px) {
-    display: none;
+  @media (width < 768px) {
+    /* display: none; */
+    position: absolute;
+    top: 100vh;
+    right: 0;
+
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1rem 0;
+    background-color: black;
+
+    transition: all .2s ease;
+    & li{
+      & a{
+        padding: 2rem;
+      }
+    }
+    &.menu-active{
+      top: 0;
+    }
   }
 `;
 
