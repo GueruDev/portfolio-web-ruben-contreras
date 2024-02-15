@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled  from 'styled-components';
+import { NavLink } from "react-router-dom";
 import { Section } from '../components/section';
 import rubenContreras from '../img/ruben-contreras.png';
 
@@ -42,11 +43,14 @@ const HeroContainer = styled.div`
       padding: .7rem 4rem;
       cursor: pointer;
       
-      font-size: clamp(3rem, 2vw, 8rem);
-      font-weight: bold;
+      & > a{
+        font-size: clamp(3rem, 2vw, 8rem);
+        font-weight: bold;
+        text-decoration: none;
+        color:var(---primary-btn-color);
+      }
       
       background-color: var(--secondary-btn-color);
-      color:#000;
       border-radius: 50px;
     }
   }
@@ -81,8 +85,10 @@ const HeroContainer = styled.div`
         text-align: start;
       }
       & > button{
-        font-size: clamp(2rem, 5.5vw, 4rem);
         place-self: center;
+        & > a{
+          font-size: clamp(2rem, 5.5vw, 4rem);
+        }
       }
     }
     img{
@@ -143,7 +149,10 @@ export const Inicio = () => {
             <span>a</span>
             <p ref={subtitleRef}></p>
             <span>that you need</span>
-            <button type="button">See my servicies</button>
+            <button type="button">
+              <NavLink to="/projects">See my servicies</NavLink>
+            </button>
+            
           </div>
           <img src={rubenContreras} alt="Rubén Contreras Guerrero" />
 
