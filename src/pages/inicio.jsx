@@ -9,40 +9,39 @@ width: 100%;
 `;
 
 const HeroContainer = styled.div`
-  width: clamp(500px,90%,1300px);
+  width: clamp(300px,90%,1300px);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
-  div{
+  & > div{
     position: absolute;
     display: grid;
-    h1, p, span{
+    & > h1, & > p, & >span{
       font-size: clamp(4rem, 4vw, 10rem);
       
       font-weight: bold;
     }
-    h1{
+    & > h1{
       color: var(--secondary-font-color);
     }
-    p{
-      height:clamp(5rem, 4vw, 10rem);
+    & > p{
+      height:clamp(4rem, 4vw, 10rem);
     }
-    span:nth-of-type(1){
+    & > span:nth-of-type(1){
       text-align: center;
       color: var(--thirdary-font-color);
     }
-    span:nth-of-type(2){
+    & > span:nth-of-type(2){
       text-align: end;
       color: var(--secondary-bg-color);
     }
-    button{
+    & > button{
       place-self: start;
       margin: 2rem 0;
       padding: .7rem 4rem;
       cursor: pointer;
       
-      /* font-size: 5rem; */
       font-size: clamp(3rem, 2vw, 8rem);
       font-weight: bold;
       
@@ -62,14 +61,38 @@ const HeroContainer = styled.div`
   }
   @media(width < 768px){
     grid-template-columns:unset;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
     div{
       grid-column: unset;
-      grid-row: 1 / 2;
+      grid-row: 2 / 4;
       position: relative;
+      z-index: 10;
+      & > h1, & > p, & > span {
+        font-size: clamp(3rem, 8vw, 7rem);
+      }
+      & > p{
+        height: clamp(3.7rem, 8vw, 7rem);
+        text-align: center;
+      }
+      & > span:nth-of-type(1){
+        text-align: center;
+      }
+      & > span:nth-of-type(2){
+        text-align: start;
+      }
+      & > button{
+        font-size: clamp(2rem, 5.5vw, 4rem);
+        place-self: center;
+      }
     }
     img{
-      height: 50vh;
+      position: fixed;
+      bottom: 0;
+      right: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: clamp(32rem, 60vw, 50rem);
+      margin: 0 auto;
       grid-column: unset;
       grid-row: 2 / 3;
     }
