@@ -10,6 +10,7 @@ const StyledSection = styled.section`
     flex-direction: column;
     gap: 2rem;
     overflow: hidden;
+
     @media(  width < 768px){
         transition: transform 0.3s ease;
         &.menu-active{
