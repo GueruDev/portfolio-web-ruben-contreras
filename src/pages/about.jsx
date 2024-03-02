@@ -1,54 +1,95 @@
 import styled from 'styled-components';
 import { Section } from "../components/section";
+import rubenContreras from '../img/ruben-contreras2.png';
 
-const ProfileContainer = styled.div`
-    display: flex;
-    justify-content: center;
+const HeroSection = styled.div`
+    width: clamp(300px,90%,1300px);
+    height: 100vh;
+    margin: 20vh 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    flex-direction: column;
-    gap: 20px;
-`;
-
-const ProfileImage = styled.img`
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-`;
-
-const ProfileText = styled.p`
-    text-align: center;
-    max-width: 800px;
-`;
-
-const TimeLineContainer = styled.div`
+    gap: 2rem;
+    @media( width < 900px){
+        grid-template-columns: 1fr;
+    }
+`
+const HeroText = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 10px;
-`;
-
-const TimeLineItem = styled.div`
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #000;
-    padding: 10px 0;
-`;
+    gap: 2rem;
+    & > div > h2{
+        font-size:clamp(2rem, 2vw, 5rem);
+    }
+    & > p{
+        font-size: clamp(2rem, 2vw, 3rem);
+        text-align: end;
+    }
+    @media( width < 900px){
+        order: 1;
+        width: clamp(250px,80%,800px);
+        margin: 0 auto;
+    }
+`
+const HeroTextTitleContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    .hero-text__divisor{
+        height: 2px;
+        width: 100%;
+        background-color: var(--primary-bg-color);
+    }
+    @media( width < 900px){
+        /* width: clamp(250px,70%,500px); */
+    }
+    `
+const ImgContainer = styled.div`
+    position: relative;
+    place-self: end end;
+    & > img{
+        position: relative;
+        bottom: -10px;
+        width: clamp(250px,70vw,700px);
+    }
+    @media( width < 900px){
+        /* position: fixed;  */
+        order: 2;
+        place-self: end center;
+        & > img{
+            width: clamp(250px,40vh,400px);
+            right: unset;
+        }
+        .image-bg__back, .image-bg__front{
+            display: none;
+        }
+    }
+`
 
 export function About() {
     return (
         <Section >
-            <ProfileContainer>
-                <ProfileImage src="path_to_your_image" alt="Your Name" />
-                <ProfileText>
-                    Aquí puedes escribir sobre ti y tu experiencia profesional.
-                </ProfileText>
-            </ProfileContainer>
-            <TimeLineContainer>
-                <TimeLineItem>
-                    <span>Fecha de inicio - Fecha de fin</span>
-                    <span>Estudié y/o trabajé en tal lugar</span>
-                </TimeLineItem>
-                {/* Puedes agregar más elementos de TimeLineItem según sea necesario */}
-            </TimeLineContainer>
+            <HeroSection>
+                <ImgContainer>
+                    <img src={rubenContreras} alt="Ruben Contreras" />
+                </ImgContainer>
+                <HeroText>
+                    <HeroTextTitleContainer>
+                        <h2>About me</h2>                        
+                        <div className="hero-text__divisor"></div>
+                    </HeroTextTitleContainer>
+                    <p>
+                        Hi there!, my name is Ruben,
+                        and I’m a developer from Peru
+                        with a passion for creating
+                        web application. Using the
+                        latest technologies I can
+                        provide the development
+                        service that you are looking
+                        for !
+                    </p>
+                </HeroText>
+            </HeroSection>
         </Section>
     );
 }
