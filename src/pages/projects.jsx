@@ -1,15 +1,19 @@
 import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Section } from "../components/section";
 
 import styled from "styled-components";
 import reactImg from "../img/React.png";
 import angularImg from "../img/Angular.png";
-import svelteImg from "../img/Svelte.png";
+import javascriptImg from "../img/JavaScript.png";
 import vueImg from "../img/Vue.png";
 
 const StyledParagraph = styled.h3`
   color: var(--secondary-font-color);
   font-size: clamp(1.5rem, 5vw, 3.5rem);
+  @media( width <= 768px){
+    margin-top: 6vh;
+  }
 `;
 
 const StyledImageGrid = styled.div`
@@ -84,8 +88,8 @@ const Star = styled.div`
     2% 35%,
     39% 35%
   );
-  @media(  width < 768px){
-    --start-size:clamp(40px, 12vw, 100px);
+  @media (width < 768px) {
+    --start-size: clamp(40px, 12vw, 100px);
     top: 50%;
     transform: translateY(-50%);
     height: var(--start-size);
@@ -95,41 +99,23 @@ const Star = styled.div`
 `;
 
 export function ImageGrid() {
-  const navigate = useNavigate();
-
   return (
     <Section>
-      <StyledParagraph>Choose the proyect category</StyledParagraph>
+      <StyledParagraph>Choose the project category</StyledParagraph>
       <StyledImageGrid>
-        <a
-          onClick={() => navigate("/projects/react")}
-          className="image-card"
-          key={1}
-        >
+        <NavLink to={"/projects/react"} className="image-card" key={1}>
           <img src={reactImg} />
           <Star />
-        </a>
-        <a
-          onClick={() => navigate("/projects/angular")}
-          className="image-card"
-          key={2}
-        >
+        </NavLink>
+        <NavLink to={"/projects/angular"} className="image-card" key={2}>
           <img src={angularImg} />
-        </a>
-        <a
-          onClick={() => navigate("/projects/svelte")}
-          className="image-card"
-          key={3}
-        >
-          <img src={svelteImg} />
-        </a>
-        <a
-          onClick={() => navigate("/projects/vue")}
-          className="image-card"
-          key={4}
-        >
+        </NavLink>
+        <NavLink to={"/projects/svelte"} className="image-card" key={3}>
+          <img src={javascriptImg} />
+        </NavLink>
+        <NavLink to={"/projects/vue"} className="image-card" key={4}>
           <img src={vueImg} />
-        </a>
+        </NavLink>
       </StyledImageGrid>
     </Section>
   );

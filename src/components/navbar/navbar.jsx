@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { BtnNavMobile, StyledBtnNav } from './Buttons';
+import { BtnNavMobile, StyledBtnNav } from './buttons';
 import { Links } from './links';
 
 
