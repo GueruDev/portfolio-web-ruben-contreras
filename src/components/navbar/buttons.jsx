@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledBtnNav = styled.button`
+export const StyledBtnNav = styled.a`
   cursor: pointer;
   padding: 0.6rem 1.5rem;
   border-radius: 1.1rem;
@@ -8,6 +8,7 @@ export const StyledBtnNav = styled.button`
   background-color: var(--primary-btn-color);
   color: var(--primary-font-color);
   font-weight: bold;
+  text-decoration: none;
   @media (width < 768px) {
     background-color: var(--secondary-bg-color);
   }

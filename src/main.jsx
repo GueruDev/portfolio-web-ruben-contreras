@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //! COMPONENTS
 import { About } from "./pages/about";
-import { Contact } from "./pages/contact";
+import { Contact } from "./pages/contact/contact.jsx";
 import { Inicio } from "./pages/inicio";
 import { Navbar } from "./components/navbar/navbar";
 import { ImageGrid } from "./pages/projects";
