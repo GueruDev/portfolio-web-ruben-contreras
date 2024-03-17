@@ -1,8 +1,11 @@
 //! LIBRARIES
-import React from "react";
+import { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createGlobalStyle } from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// CONTENFUL
+import { useContentful } from "./hooks/useContenful.jsx";
 
 //! COMPONENTS
 import { About } from "./pages/about";
@@ -60,6 +63,17 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
+  // const [users, setUsers] = useState([]);
+  // const { getUsers} = useContentful();
+
+  // useEffect(() => {
+  //   getUsers().then((response) => {
+  //     console.log("Vamos funciona MRD !!!:", response); // Agregamos un console.log para ver los datos
+  //     if (response) {
+  //       setUsers(response);
+  //     }
+  //   });
+  // } , []);
   return (
     <>
       <GlobalStyle />
@@ -89,7 +103,7 @@ function App() {
             }
           />
           <Route
-            path="/projects/svelte"
+            path="/projects/javascript"
             element={
               <Layout
                 title="Svelte"

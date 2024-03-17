@@ -18,7 +18,7 @@ const StyledNavbar = styled.nav`
             font-weight: bold;
         }
     }
-    
+
     @media( width < 768px){
         & > div{
             flex-direction: row-reverse;

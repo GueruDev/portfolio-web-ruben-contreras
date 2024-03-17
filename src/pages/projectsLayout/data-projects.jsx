@@ -11,7 +11,7 @@ export const projects = {
       { id: 4, name: 'Proyecto 4', description: 'Descripción del Proyecto 4', img: imgTest, technologies: ['React', 'Redux', 'Material UI'] },
       // ...
     ],
-    svelte: [
+    javascript: [
       { id: 3, name: 'Proyecto 7', description: 'Descripción del Proyecto 7', img: imgTest, technologies: ['React', 'Redux', 'Material UI'] },
       { id: 4, name: 'Proyecto 8', description: 'Descripción del Proyecto 8', img: imgTest, technologies: ['React', 'Redux', 'Material UI'] },
     ],
