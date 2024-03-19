@@ -20,7 +20,6 @@ const LayoutContainer = styled.div.attrs({ className: 'layout-container' })`
   
   max-width: 1300px;
   margin: 0 auto;
-  padding: 10vh 0 4rem;
   animation: ${zoomIn} 0.5s;
   color: white;
 
@@ -37,12 +36,14 @@ const LayoutContainer = styled.div.attrs({ className: 'layout-container' })`
 
   .project-grid {
     display: grid;
-    width: 60%;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    width: 70%;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     justify-content: center;
     gap: 2rem;
 
     .project-card {
+      margin: 0 auto;
+      max-width: 500px;
       border: 1px solid #ccc;
       padding: 1rem;
       border-radius: 8px;
@@ -78,7 +79,8 @@ const LayoutContainer = styled.div.attrs({ className: 'layout-container' })`
           backface-visibility: hidden;
 
           img {
-            width: 100%;            
+            width: 100%;
+            aspect-ratio: 16 / 9;
             height: auto;
             transition: transform 0.3s ease-in-out;
           }
@@ -100,7 +102,8 @@ const LayoutContainer = styled.div.attrs({ className: 'layout-container' })`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: clamp(.5rem, 1vw, 2rem);
+  gap: 2rem;
+  
   }
 
   .technologies {

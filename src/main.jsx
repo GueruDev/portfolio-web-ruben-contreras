@@ -16,6 +16,12 @@ import { ImageGrid } from "./pages/projects";
 import { Layout } from "./pages/projectsLayout/layout";
 import { Section } from "./components/section.jsx";
 
+// IMAGES
+import angular from "./img/logos/Angular.png";
+import javascript from "./img/logos/JavaScript.png";
+import react from "./img/logos/React.png";
+import typescript from "./img/logos/TypeScript.png";
+import vue from "./img/logos/Vue.png";
 
 //! TRANSLATIONS
 import { spanish } from "./lang/spanish.json";
@@ -84,7 +90,7 @@ function App() {
               <Section>
                 <Layout
                   title="React"
-                  img='/logos/React.png'
+                  img={react}
                   text="Frontend library for building user interfaces with reusable components, focused on efficiency, state management, and agile development of web applications."
                 />
               </Section>
@@ -96,7 +102,7 @@ function App() {
               <Section>
                 <Layout
                   title="TypeScript"
-                  img='/logos/TypeScript.png'
+                  img={typescript}
                   text="Superset of JavaScript adding optional static typing, providing a more robust way to build and maintain large JavaScript applications."
                 />
               </Section>
@@ -108,7 +114,7 @@ function App() {
               <Section>
                 <Layout
                   title="JavaScript"
-                  img='/logos/JavaScript.png'
+                  img={javascript}
                   text="Programming language used in web development to create interactivity and dynamism in pages, supported by all browsers."
                 />                
               </Section>
@@ -120,7 +126,7 @@ function App() {
               <Section>
                 <Layout
                   title="Vue"
-                  img='/logos/Vue.png'
+                  img={vue}
                   text="
                   Progressive JavaScript framework for creating interactive and sophisticated user interfaces, known for its gentle learning curve and flexibility in frontend development."
                 />                

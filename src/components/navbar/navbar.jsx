@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import CV from "../../CV/Ruben-Contreras-CV.pdf";
+
 
 import { BtnNavMobile, StyledBtnNav } from './buttons';
 import { Links } from './links';
@@ -32,7 +34,7 @@ export function Navbar() {
             <div>
                 <Links />
                 <BtnNavMobile />
-                <StyledBtnNav href='./Ruben-Contreras-CV.docx' download>Download CV</StyledBtnNav>
+                <StyledBtnNav href={CV} download>Download CV</StyledBtnNav>
             </div>
         </StyledNavbar>
     );
