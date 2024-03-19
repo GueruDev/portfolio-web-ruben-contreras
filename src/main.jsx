@@ -82,10 +82,10 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/projects" element={<ImageGrid />} />
+          <Route path="/portfolio-web-ruben-contreras/" element={<Inicio />} />
+          <Route path="/portfolio-web-ruben-contreras/projects" element={<ImageGrid />} />
           <Route
-            path="/projects/react"
+            path="/portfolio-web-ruben-contreras/projects/react"
             element={
               <Section>
                 <Layout
@@ -97,7 +97,7 @@ function App() {
             }
           />
           <Route
-            path="/projects/typescript"
+            path="/portfolio-web-ruben-contreras/projects/typescript"
             element={
               <Section>
                 <Layout
@@ -109,7 +109,7 @@ function App() {
             }
           />
           <Route
-            path="/projects/javascript"
+            path="/portfolio-web-ruben-contreras/projects/javascript"
             element={
               <Section>
                 <Layout
@@ -121,7 +121,7 @@ function App() {
             }
           />
           <Route
-            path="/projects/vue"
+            path="/portfolio-web-ruben-contreras/projects/vue"
             element={
               <Section>
                 <Layout
@@ -133,8 +133,8 @@ function App() {
               </Section>
             }
           />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/portfolio-web-ruben-contreras/about" element={<About />} />
+          <Route path="/portfolio-web-ruben-contreras/contact" element={<Contact />} />
         </Routes>
       </Router>
     </>

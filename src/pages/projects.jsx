@@ -107,17 +107,17 @@ export function ImageGrid() {
     <Section>
       <StyledParagraph>Choose the project category</StyledParagraph>
       <StyledImageGrid>
-        <NavLink to={"/projects/react"} className="image-card" key={1}>
+        <NavLink to={"/portfolio-web-ruben-contreras/projects/react"} className="image-card" key={1}>
           <img src={reactImg} />
           <Star />
         </NavLink>
-        <NavLink to={"/projects/typescript"} className="image-card" key={2}>
+        <NavLink to={"/portfolio-web-ruben-contreras/projects/typescript"} className="image-card" key={2}>
           <img src={typescriptImg} />
         </NavLink>
-        <NavLink to={"/projects/javascript"} className="image-card" key={3}>
+        <NavLink to={"/portfolio-web-ruben-contreras/projects/javascript"} className="image-card" key={3}>
           <img src={javascriptImg} />
         </NavLink>
-        <NavLink to={"/projects/vue"} className="image-card" key={4}>
+        <NavLink to={"/portfolio-web-ruben-contreras/projects/vue"} className="image-card" key={4}>
           <img src={vueImg} />
         </NavLink>
       </StyledImageGrid>

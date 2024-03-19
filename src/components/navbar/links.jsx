@@ -83,25 +83,25 @@ export function Links() {
   return (
     <StyledLinks>
       <li>
-        <NavLink to="/" activeclassname="active">
+        <NavLink to="/portfolio-web-ruben-contreras/" activeclassname="active">
           Inicio
           <AiFillHome />
         </NavLink>
       </li>
       <li>
-        <NavLink to="/projects" activeclassname="active">
+        <NavLink to="/portfolio-web-ruben-contreras/projects" activeclassname="active">
           Projects
           <AiFillProject />
         </NavLink>
       </li>
       <li>
-        <NavLink to="/about" activeclassname="active">
+        <NavLink to="/portfolio-web-ruben-contreras/about" activeclassname="active">
           About me
           <AiFillInfoCircle />
         </NavLink>
       </li>
       <li>
-        <NavLink to="/contact" activeclassname="active">
+        <NavLink to="/portfolio-web-ruben-contreras/contact" activeclassname="active">
           Contact
           <AiFillPhone />
         </NavLink>
