@@ -84,7 +84,7 @@ export function Links() {
     <StyledLinks>
       <li>
         <NavLink to="/portfolio-web-ruben-contreras/" activeclassname="active">
-          Inicio
+          Home
           <AiFillHome />
         </NavLink>
       </li>
