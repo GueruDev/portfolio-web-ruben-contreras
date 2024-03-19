@@ -313,7 +313,7 @@ width: 100%;
       grid-row: 2 / 3;
     }
   }
-`,rw=()=>{const e=["Frontend","React Developer","FullStack","Designer","Self-taught"],t=J.useRef(""),n=async function(){let r="";for(;;){let o;do o=e[Math.floor(Math.random()*e.length)];while(o===r);r=o;for(const i of o){if(!t.current)return;t.current.textContent+=i,await new Promise(l=>setTimeout(l,100))}await new Promise(i=>setTimeout(i,1e3));for(let i=0;i<o.length;i++){if(!t.current)return;t.current.textContent=t.current.textContent.slice(0,-1),await new Promise(l=>setTimeout(l,100))}}};return J.useEffect(()=>{n()},[]),$.jsx($n,{children:$.jsx(tw,{children:$.jsxs(nw,{children:[$.jsxs("div",{children:[$.jsx("h1",{children:"Ruben Contreras"}),$.jsx("span",{children:"a"}),$.jsx("p",{ref:t}),$.jsx("span",{children:"that you need"}),$.jsx("button",{type:"button",children:$.jsx(Sn,{to:"/projects",children:"See my projects"})})]}),$.jsx("img",{src:ew,alt:"Rubén Contreras Guerrero"})]})})})},ow="/portfolio-web-ruben-contreras/assets/Ruben-Contreras-CV-pmkBlroU.pdf",iw=je.a`
+`,rw=()=>{const e=["Frontend","React Developer","FullStack","Designer","Self-taught"],t=J.useRef(""),n=async function(){let r="";for(;;){let o;do o=e[Math.floor(Math.random()*e.length)];while(o===r);r=o;for(const i of o){if(!t.current)return;t.current.textContent+=i,await new Promise(l=>setTimeout(l,100))}await new Promise(i=>setTimeout(i,1e3));for(let i=0;i<o.length;i++){if(!t.current)return;t.current.textContent=t.current.textContent.slice(0,-1),await new Promise(l=>setTimeout(l,100))}}};return J.useEffect(()=>{n()},[]),$.jsx($n,{children:$.jsx(tw,{children:$.jsxs(nw,{children:[$.jsxs("div",{children:[$.jsx("h1",{children:"Ruben Contreras"}),$.jsx("span",{children:"a"}),$.jsx("p",{ref:t}),$.jsx("span",{children:"that you need"}),$.jsx("button",{type:"button",children:$.jsx(Sn,{to:"/projects",children:"See my projects"})})]}),$.jsx("img",{src:ew,alt:"Rubén Contreras Guerrero"})]})})})},ow="/portfolio-web-ruben-contreras/assets/Ruben-Contreras-CV-mHaKV-mA.pdf",iw=je.a`
   cursor: pointer;
   padding: 0.6rem 1.5rem;
   border-radius: 1.1rem;
@@ -433,7 +433,7 @@ width: 100%;
       top: 0;
     }
   }
-`;function dw(){return $.jsxs(pw,{children:[$.jsx("li",{children:$.jsxs(Sn,{to:"/portfolio-web-ruben-contreras/",activeclassname:"active",children:["Inicio",$.jsx(sw,{})]})}),$.jsx("li",{children:$.jsxs(Sn,{to:"/portfolio-web-ruben-contreras/projects",activeclassname:"active",children:["Projects",$.jsx(fw,{})]})}),$.jsx("li",{children:$.jsxs(Sn,{to:"/portfolio-web-ruben-contreras/about",activeclassname:"active",children:["About me",$.jsx(uw,{})]})}),$.jsx("li",{children:$.jsxs(Sn,{to:"/portfolio-web-ruben-contreras/contact",activeclassname:"active",children:["Contact",$.jsx(cw,{})]})})]})}const hw=je.nav`
+`;function dw(){return $.jsxs(pw,{children:[$.jsx("li",{children:$.jsxs(Sn,{to:"/portfolio-web-ruben-contreras/",activeclassname:"active",children:["Home",$.jsx(sw,{})]})}),$.jsx("li",{children:$.jsxs(Sn,{to:"/portfolio-web-ruben-contreras/projects",activeclassname:"active",children:["Projects",$.jsx(fw,{})]})}),$.jsx("li",{children:$.jsxs(Sn,{to:"/portfolio-web-ruben-contreras/about",activeclassname:"active",children:["About me",$.jsx(uw,{})]})}),$.jsx("li",{children:$.jsxs(Sn,{to:"/portfolio-web-ruben-contreras/contact",activeclassname:"active",children:["Contact",$.jsx(cw,{})]})})]})}const hw=je.nav`
     position: fixed;
     width: 100%;
     z-index: 100;
