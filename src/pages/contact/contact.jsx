@@ -56,9 +56,18 @@ export function Contact() {
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    const formInputs = form.current.querySelectorAll('input, textarea, button');
+                    console.log(formInputs)
+                    formInputs.forEach(input => {
+                    input.disabled = true;
+
+                    const submitButton = form.current.querySelector('button');
+                    submitButton.textContent = 'Message sent ✅';
+                });
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
+                    submitButton.textContent = 'Error ❌ reload and try again';
                 },
             );
     };

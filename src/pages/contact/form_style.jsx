@@ -28,5 +28,6 @@ color: var(--primary-btn-color);
     padding: 0%.7;
 
     grid-column: 1 / 3;
+    cursor: pointer;
 }
 `
