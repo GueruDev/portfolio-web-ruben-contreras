@@ -49,6 +49,7 @@ const LayoutContainer = styled.div.attrs({ className: 'layout-container' })`
       perspective: 30500px;
       position: relative;
       cursor: pointer;
+      background-color: #000;
 
       text-decoration: none;
       color: var(--secondary-font-color);
@@ -85,6 +86,7 @@ const LayoutContainer = styled.div.attrs({ className: 'layout-container' })`
 
         .card-back {
           position: absolute;
+          font-size: clamp(1rem, 2.2vw, 1.5rem);
   top: 0;
   width: 100%;
   height: 100%;
@@ -98,7 +100,7 @@ const LayoutContainer = styled.div.attrs({ className: 'layout-container' })`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(.5rem, 1vw, 2rem);
   }
 
   .technologies {

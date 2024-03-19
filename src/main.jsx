@@ -14,6 +14,7 @@ import { Inicio } from "./pages/inicio";
 import { Navbar } from "./components/navbar/navbar";
 import { ImageGrid } from "./pages/projects";
 import { Layout } from "./pages/projectsLayout/layout";
+import { Section } from "./components/section.jsx";
 
 
 //! TRANSLATIONS
@@ -80,42 +81,50 @@ function App() {
           <Route
             path="/projects/react"
             element={
-              <Layout
-                title="React"
-                img='/logos/React.png'
-                text="Frontend library for building user interfaces with reusable components, focused on efficiency, state management, and agile development of web applications."
-              />
+              <Section>
+                <Layout
+                  title="React"
+                  img='/logos/React.png'
+                  text="Frontend library for building user interfaces with reusable components, focused on efficiency, state management, and agile development of web applications."
+                />
+              </Section>
             }
           />
           <Route
             path="/projects/typescript"
             element={
-              <Layout
-                title="TypeScript"
-                img='/logos/TypeScript.png'
-                text="Superset of JavaScript adding optional static typing, providing a more robust way to build and maintain large JavaScript applications."
-              />
+              <Section>
+                <Layout
+                  title="TypeScript"
+                  img='/logos/TypeScript.png'
+                  text="Superset of JavaScript adding optional static typing, providing a more robust way to build and maintain large JavaScript applications."
+                />
+              </Section>
             }
           />
           <Route
             path="/projects/javascript"
             element={
-              <Layout
-                title="JavaScript"
-                img='/logos/JavaScript.png'
-                text="Programming language used in web development to create interactivity and dynamism in pages, supported by all browsers."
-              />
+              <Section>
+                <Layout
+                  title="JavaScript"
+                  img='/logos/JavaScript.png'
+                  text="Programming language used in web development to create interactivity and dynamism in pages, supported by all browsers."
+                />                
+              </Section>
             }
           />
           <Route
             path="/projects/vue"
             element={
-              <Layout
-                title="Vue"
-                img='/logos/Vue.png'
-                text="
-                Progressive JavaScript framework for creating interactive and sophisticated user interfaces, known for its gentle learning curve and flexibility in frontend development."
-              />
+              <Section>
+                <Layout
+                  title="Vue"
+                  img='/logos/Vue.png'
+                  text="
+                  Progressive JavaScript framework for creating interactive and sophisticated user interfaces, known for its gentle learning curve and flexibility in frontend development."
+                />                
+              </Section>
             }
           />
           <Route path="/about" element={<About />} />

@@ -32,7 +32,7 @@ export function Navbar() {
             <div>
                 <Links />
                 <BtnNavMobile />
-                <StyledBtnNav href='./Ruben-Contreras-CV.pdf' download>Download CV</StyledBtnNav>
+                <StyledBtnNav href='./Ruben-Contreras-CV.docx' download>Download CV</StyledBtnNav>
             </div>
         </StyledNavbar>
     );
