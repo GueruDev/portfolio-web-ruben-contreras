@@ -1,22 +1,15 @@
-import imgTest from './512.png'
 export const projects = {
     react: [
-      { id: 1, name: 'Proyecto 1', description: 'Descripción del Proyecto 1', img: imgTest, technologies: ['React', 'Redux', 'Material UI'] },
-      { id: 2, name: 'Proyecto 2', description: 'Descripción del Proyecto 2', img: imgTest, technologies: ['React', 'Redux', 'Material UI'] },
-      { id:3, name: 'Proyect 3', description: 'Descripción del Proyecto 3', img: imgTest, technologies: ['React', 'Redux', 'Material UI'] }
-      // ...
+      { id: 1, name: 'Rick and Morty App', description: 'An application created with the create-react-app CLI that allows you to view all characters from the Rick and Morty series using pagination.', img: '/Rick-and-Morty-app.png', technologies: ['JavaScript', 'React', 'Bootstrap'], link: 'https://guerudev.github.io/Rick-and-Morty-app/' },
+      { id: 2, name: 'My own Portfolio', description: "This is my application created with React Vite, which allows viewing my projects, CV, and a contact form. It's designed for recruiters to see my versatility as a Front-End.", img: '/My-own-portfolio.png', technologies: ['JavaScript', 'React', 'Vite', 'Styled Components', 'Contentful'], },
     ],
-    angular: [
-      { id: 3, name: 'Proyecto 3', description: 'Descripción del Proyecto 3', img: imgTest, technologies: ['React', 'Redux', 'Material UI'] },
-      { id: 4, name: 'Proyecto 4', description: 'Descripción del Proyecto 4', img: imgTest, technologies: ['React', 'Redux', 'Material UI'] },
-      // ...
+    typescript: [
+      { id: 1, name: 'Message Encrypter', description: "Message encryption app featuring key accessibility features such as light/dark theme toggle and language switching without page reload for seamless user experience.", img: '/Message-Encrypter.png', technologies: ['TypeScript', 'SCSS', 'HTML'], link: 'https://guerudev.github.io/Message-encrypter-/' },
     ],
     javascript: [
-      { id: 3, name: 'Proyecto 7', description: 'Descripción del Proyecto 7', img: imgTest, technologies: ['React', 'Redux', 'Material UI'] },
-      { id: 4, name: 'Proyecto 8', description: 'Descripción del Proyecto 8', img: imgTest, technologies: ['React', 'Redux', 'Material UI'] },
+      { id: 1, name: 'SPA Project', description: 'SPA, interactive UI, displaying a list of video games with animations made by the ViewTransition API (experimental) built with Vanilla JS.',img:'/SPA-project.png', technologies: ['JavaScript Vanilla', 'CSS', 'HTML'], link:'https://guerudev.github.io/SPA-project' }
     ],
     vue:[
-      { id: 3, name: 'Proyecto 5', description: 'Descripción del Proyecto 5', img: imgTest, technologies: ['React', 'Redux', 'Material UI'] },
-      { id: 4, name: 'Proyecto 6', description: 'Descripción del Proyecto 6', img: imgTest, technologies: ['React', 'Redux', 'Material UI'] },
+      { id: 1, name: 'Todo List', description: 'The well-known CRUD of the Todo List. (Project in development).', img: '/512.png', technologies: ['Vue', 'Emotion', 'Tailwind'] },
     ]
   };

@@ -7,6 +7,7 @@ import reactImg from "../img/React.png";
 import angularImg from "../img/Angular.png";
 import javascriptImg from "../img/JavaScript.png";
 import vueImg from "../img/Vue.png";
+import typescriptImg from "../img/TypeScript.png";
 
 const StyledParagraph = styled.h3`
   color: var(--secondary-font-color);
@@ -21,6 +22,7 @@ const StyledImageGrid = styled.div`
   width: 100%;
   height: 60%;
   overflow: hidden;
+  
 
   .image-card {
     position: relative;
@@ -28,13 +30,15 @@ const StyledImageGrid = styled.div`
     transition: all 0.5s ease;
     flex: 1;
     cursor: pointer;
-
+    
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
       transition: all 0.5s ease;
+      pointer-events: none;
+      
     }
 
     &:before {
@@ -107,10 +111,10 @@ export function ImageGrid() {
           <img src={reactImg} />
           <Star />
         </NavLink>
-        <NavLink to={"/projects/angular"} className="image-card" key={2}>
-          <img src={angularImg} />
+        <NavLink to={"/projects/typescript"} className="image-card" key={2}>
+          <img src={typescriptImg} />
         </NavLink>
-        <NavLink to={"/projects/svelte"} className="image-card" key={3}>
+        <NavLink to={"/projects/javascript"} className="image-card" key={3}>
           <img src={javascriptImg} />
         </NavLink>
         <NavLink to={"/projects/vue"} className="image-card" key={4}>

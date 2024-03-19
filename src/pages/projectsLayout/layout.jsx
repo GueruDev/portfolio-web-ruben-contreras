@@ -17,10 +17,12 @@ const LayoutContainer = styled.div.attrs({ className: 'layout-container' })`
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  height: 100vh;
+  
   max-width: 1300px;
   margin: 0 auto;
+  padding: 10vh 0 4rem;
   animation: ${zoomIn} 0.5s;
+  color: white;
 
   .image {
     width: 100%;
@@ -35,8 +37,8 @@ const LayoutContainer = styled.div.attrs({ className: 'layout-container' })`
 
   .project-grid {
     display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 60%;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     justify-content: center;
     gap: 2rem;
 
@@ -48,12 +50,16 @@ const LayoutContainer = styled.div.attrs({ className: 'layout-container' })`
       position: relative;
       cursor: pointer;
 
+      text-decoration: none;
+      color: var(--secondary-font-color);
+
       &:hover .card-inner {
         transform: rotateY(180deg);
       }
 
       &:hover .card-front img {
         transform: scale(1.2);
+        
       }
 
       .card-inner {
@@ -71,8 +77,7 @@ const LayoutContainer = styled.div.attrs({ className: 'layout-container' })`
           backface-visibility: hidden;
 
           img {
-            width: 100%;
-            max-width: 512px;
+            width: 100%;            
             height: auto;
             transition: transform 0.3s ease-in-out;
           }
@@ -93,6 +98,8 @@ const LayoutContainer = styled.div.attrs({ className: 'layout-container' })`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
+  }
 
   .technologies {
     display: grid;
@@ -104,7 +111,6 @@ const LayoutContainer = styled.div.attrs({ className: 'layout-container' })`
         }
       }
     }
-  }
 `;
 
 const Image = styled.img.attrs({ className: 'image' })``;
@@ -113,7 +119,7 @@ const Description = styled.p.attrs({ className: 'description' })``;
 
 const ProjectGrid = styled.div.attrs({ className: 'project-grid' })``;
 
-const ProjectCard = styled.div.attrs({ className: 'project-card' })``;
+const ProjectCard = styled.a.attrs({ className: 'project-card' })``;
 
 const CardInner = styled.div.attrs({ className: 'card-inner' })``;
 
@@ -132,7 +138,7 @@ export const Layout = ({ title, img, text }) => {
       <Description>{text}</Description>
       <ProjectGrid>
         {projectList.map(project => (
-          <ProjectCard key={project.id}>
+          <ProjectCard href={project.link} key={project.id} target='_blank'>
             <CardInner>
               <CardFront>
                 <img src={project.img} alt={project.name} />
@@ -140,6 +146,7 @@ export const Layout = ({ title, img, text }) => {
               </CardFront>
               <CardBack>
                 <p>{project.description}</p>
+                <h3>Tecnologías:</h3>
                 <ul className="technologies">
                   {project.technologies.map((tech, index) => (
                     <li key={index}>{tech}</li>

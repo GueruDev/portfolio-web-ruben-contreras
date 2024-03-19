@@ -15,11 +15,6 @@ import { Navbar } from "./components/navbar/navbar";
 import { ImageGrid } from "./pages/projects";
 import { Layout } from "./pages/projectsLayout/layout";
 
-//! IMG
-import reactImg from "./img/logos/React.png";
-import angularImg from "./img/logos/Angular.png";
-import svelteImg from "./img/logos/Svelte.png";
-import vueImg from "./img/logos/Vue.png";
 
 //! TRANSLATIONS
 import { spanish } from "./lang/spanish.json";
@@ -87,18 +82,18 @@ function App() {
             element={
               <Layout
                 title="React"
-                img={reactImg}
-                text="React es una biblioteca JavaScript para construir interfaces de usuario."
+                img='/logos/React.png'
+                text="Frontend library for building user interfaces with reusable components, focused on efficiency, state management, and agile development of web applications."
               />
             }
           />
           <Route
-            path="/projects/angular"
+            path="/projects/typescript"
             element={
               <Layout
-                title="Angular"
-                img={angularImg}
-                text="Angular es un marco de trabajo para construir aplicaciones web."
+                title="TypeScript"
+                img='/logos/TypeScript.png'
+                text="Superset of JavaScript adding optional static typing, providing a more robust way to build and maintain large JavaScript applications."
               />
             }
           />
@@ -106,9 +101,9 @@ function App() {
             path="/projects/javascript"
             element={
               <Layout
-                title="Svelte"
-                img={svelteImg}
-                text="Svelte es un marco de trabajo para construir interfaces de usuario."
+                title="JavaScript"
+                img='/logos/JavaScript.png'
+                text="Programming language used in web development to create interactivity and dynamism in pages, supported by all browsers."
               />
             }
           />
@@ -117,8 +112,9 @@ function App() {
             element={
               <Layout
                 title="Vue"
-                img={vueImg}
-                text="Vue.js es un marco de trabajo para construir interfaces de usuario."
+                img='/logos/Vue.png'
+                text="
+                Progressive JavaScript framework for creating interactive and sophisticated user interfaces, known for its gentle learning curve and flexibility in frontend development."
               />
             }
           />

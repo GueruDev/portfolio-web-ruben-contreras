@@ -150,7 +150,7 @@ export const Inicio = () => {
             <p ref={subtitleRef}></p>
             <span>that you need</span>
             <button type="button">
-              <NavLink to="/projects">See my servicies</NavLink>
+              <NavLink to="/projects">See my projects</NavLink>
             </button>
             
           </div>
