@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Section } from "../components/section";
 
 import styled from "styled-components";
@@ -107,19 +107,19 @@ export function ImageGrid() {
     <Section>
       <StyledParagraph>Choose the project category</StyledParagraph>
       <StyledImageGrid>
-        <NavLink to={"/projects/react"} className="image-card" key={1}>
+        <Link to={"/projects/react"} className="image-card" key={1}>
           <img src={reactImg} />
           <Star />
-        </NavLink>
-        <NavLink to={"/projects/typescript"} className="image-card" key={2}>
+        </Link>
+        <Link to={"/projects/typescript"} className="image-card" key={2}>
           <img src={typescriptImg} />
-        </NavLink>
-        <NavLink to={"/projects/javascript"} className="image-card" key={3}>
+        </Link>
+        <Link to={"/projects/javascript"} className="image-card" key={3}>
           <img src={javascriptImg} />
-        </NavLink>
-        <NavLink to={"/projects/vue"} className="image-card" key={4}>
+        </Link>
+        <Link to={"/projects/vue"} className="image-card" key={4}>
           <img src={vueImg} />
-        </NavLink>
+        </Link>
       </StyledImageGrid>
     </Section>
   );
