@@ -79,7 +79,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Router>
+      <Router basename="/portfolio-web-ruben-contreras">
         <Navbar />
         <Routes>
           <Route path="/portfolio-web-ruben-contreras/" element={<Inicio />} />
